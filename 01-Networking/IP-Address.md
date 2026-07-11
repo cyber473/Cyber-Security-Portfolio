@@ -1,8 +1,8 @@
-# IP Addressing
+# IP Address
 
 ## 📌 Overview
 
-**IP Addressing** is the process of assigning a unique numerical address to every device connected to a network. It allows devices to identify each other and exchange data over local networks and the Internet.
+**IP Address** is the process of assigning a unique numerical address to every device connected to a network. It allows devices to identify each other and exchange data over local networks and the Internet.
 
 ---
 
