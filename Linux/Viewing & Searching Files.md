@@ -2,45 +2,48 @@
 
 ## 📌 Overview
 
-Linux me **Viewing & Searching Files** ka matlab files ke content ko dekhna aur system me specific files ya text ko quickly find karna hai.
+Viewing & Searching Files means **reading file contents and finding specific files or text** in the Linux file system.
 
 ## 🎯 What is it?
 
-Linux me file content dekhne ke liye `cat`, `less`, `head`, `tail` aur files/search ke liye `find`, `locate`, `grep` commands use hote hain.
+Linux provides commands such as `cat`, `less`, `head`, `tail`, `find`, `locate`, and `grep` to view and search files.
 
 ## ❓ Why is it Needed?
 
-* File content check karne ke liye.
-* Important files locate karne ke liye.
-* Configuration aur log files analyze karne ke liye.
-* VAPT me sensitive information find karne ke liye.
+It helps to:
+
+* Read file contents.
+* Find specific files and directories.
+* Search for specific text.
+* Analyze configuration and log files.
+* Find sensitive information during security testing.
 
 ## ⚙️ How Does it Work?
 
 Example:
 
-```text id="e7g0my"
+```text id="2z8g5w"
 /var/log/
 ├── auth.log
 ├── syslog
 └── apache2/
 ```
 
-Hum `cat`, `less` ya `tail` se content dekh sakte hain aur `find`/`grep` se required information search kar sakte hain.
+You can use viewing commands to read these files and searching commands to find specific files or text.
 
 ## 🏠 Real Life Example
 
-Isko **library me book search** karne jaisa samjho:
+Think of it like searching for a book in a library:
 
-* `ls` → Books ki list
-* `cat` → Book padhna
-* `less` → Page-by-page padhna
-* `find` → Specific book dhundhna
-* `grep` → Book ke andar specific word dhundhna
+* `ls` → List the available books.
+* `cat` → Read the book.
+* `less` → Read page by page.
+* `find` → Find a specific book.
+* `grep` → Search for a specific word inside a book.
 
 ## 🛠 Practical Demo
 
-```bash id="8yq6i4"
+```bash id="w5g7py"
 # View complete file
 cat notes.txt
 
@@ -62,15 +65,15 @@ grep "password" notes.txt
 
 ## 💻 Important Commands
 
-| Command  | Purpose                   |
-| -------- | ------------------------- |
-| `cat`    | View file content         |
-| `less`   | View content page-by-page |
-| `head`   | Show beginning of file    |
-| `tail`   | Show end of file          |
-| `find`   | Search files/directories  |
-| `locate` | Quickly locate files      |
-| `grep`   | Search text/pattern       |
+| Command  | Purpose                      |
+| -------- | ---------------------------- |
+| `cat`    | View file contents           |
+| `less`   | View contents page by page   |
+| `head`   | Show the beginning of a file |
+| `tail`   | Show the end of a file       |
+| `find`   | Search for files/directories |
+| `locate` | Quickly locate files         |
+| `grep`   | Search for text or patterns  |
 
 ## 🔐 VAPT Perspective
 
@@ -86,30 +89,30 @@ Viewing & Searching Files is useful for:
 
 Example:
 
-```bash id="7m1zqk"
+```bash id="x4t1vn"
 grep -R "password" /var/www/
 ```
 
-> Authorized systems/labs par hi sensitive information search karein.
+Use such searches only on **authorized systems or labs**.
 
 ## 💡 Key Points
 
-* `cat` → File read
-* `less` → Page-by-page viewing
-* `head` → First lines
-* `tail` → Last lines
-* `find` → File search
-* `grep` → Text search
-* `locate` → Fast file location
+* `cat` → View file contents.
+* `less` → View files page by page.
+* `head` → Show first lines.
+* `tail` → Show last lines.
+* `find` → Search for files.
+* `locate` → Quickly locate files.
+* `grep` → Search for text inside files.
 
 ## ❓ Interview Questions
 
 1. Which command is used to view a file?
 2. What is the difference between `cat` and `less`?
-3. What does `head` command do?
-4. What does `tail` command do?
+3. What does the `head` command do?
+4. What does the `tail` command do?
 5. Which command is used to search for files?
-6. Which command searches text inside files?
+6. Which command searches for text inside files?
 7. What is the difference between `find` and `grep`?
 
 ## 📚 References
