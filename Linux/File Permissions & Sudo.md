@@ -2,19 +2,19 @@
 
 ## 📌 Overview
 
-Linux me **File Permissions** decide karti hain ki kaun kisi file ya directory ko **read, write, ya execute** kar sakta hai.
+Linux **File Permissions** control who can **read, write, or execute** a file or directory.
 
-`sudo` users ko required permission ke saath commands execute karne deta hai.
+`sudo` allows authorized users to run commands with elevated privileges.
 
 ## 🎯 What is it?
 
-Linux permissions mainly 3 types ki hoti hain:
+Linux permissions have three basic types:
 
 * `r` → Read
 * `w` → Write
 * `x` → Execute
 
-Permissions 3 users/groups ke liye hoti hain:
+Permissions apply to:
 
 * **Owner**
 * **Group**
@@ -28,25 +28,17 @@ Example:
 
 ## ❓ Why is it Needed?
 
-* Unauthorized access prevent karta hai.
-* Sensitive files protect karta hai.
-* Users ke access ko control karta hai.
-* Privilege management me help karta hai.
-* Server security ke liye important hai.
+File permissions help to:
+
+* Prevent unauthorized access.
+* Protect sensitive files.
+* Control user access.
+* Maintain system security.
+* Manage privileges safely.
 
 ## ⚙️ How Does it Work?
 
-Example:
-
-```text
--rwxr-xr--
- │││ │││ │││
- │││ │││ └── Others
- │││ └────── Group
- └────────── Owner
-```
-
-Common permission values:
+Permission values:
 
 ```text
 r = 4
@@ -70,27 +62,29 @@ Others → r-x = 5
 
 ## 🏠 Real Life Example
 
-File permissions ko **ghar ki keys** ki tarah samjho:
+Think of file permissions like **keys to a house**:
 
-* `r` → Ghar ke andar dekhna
-* `w` → Cheezein change karna
-* `x` → File/program run karna
-
-`sudo` → Special permission wali master key jaisa hai.
+* `r` → Enter and view
+* `w` → Modify things
+* `x` → Run/use the program
+* `sudo` → Authorized master access
 
 ## 🛠 Practical Demo
 
 ```bash
-# Show permissions
+# Show file permissions
 ls -l
 
 # Change permissions
 chmod 755 script.sh
 
-# Change owner
+# Change file owner
 sudo chown user file.txt
 
-# Run command with elevated privileges
+# Change group
+sudo chgrp group file.txt
+
+# Run a command with elevated privileges
 sudo command
 ```
 
@@ -103,7 +97,7 @@ sudo command
 | `chown` | Change file owner                    |
 | `chgrp` | Change group                         |
 | `sudo`  | Run command with elevated privileges |
-| `id`    | Show user/group information          |
+| `id`    | Show user and group information      |
 
 ## 🔐 VAPT Perspective
 
@@ -113,15 +107,16 @@ File Permissions & Sudo are important for:
 * Sensitive File Access
 * Misconfiguration Detection
 * SUID/SGID Enumeration
-* Linux Server Hardening
 * Access Control Testing
+* Linux Server Hardening
 
 Example:
 
 ```bash
-# Find SUID files
 find / -perm -4000 -type f 2>/dev/null
 ```
+
+This can be used in an authorized lab to find **SUID files**.
 
 ## 💡 Key Points
 
