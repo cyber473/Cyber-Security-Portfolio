@@ -2,55 +2,56 @@
 
 ## 📌 Overview
 
-File System Navigation means Linux me **directories ke andar move karna, current location check karna, aur files/directories ko list karna**.
+File System Navigation means **moving between directories, checking the current location, and listing files and directories** in Linux.
 
 ## 🎯 What is it?
 
-Linux terminal me navigation ke liye mainly `pwd`, `ls`, aur `cd` commands use kiye jate hain.
+Linux provides commands such as `pwd`, `ls`, and `cd` to navigate through the file system from the terminal.
 
 ## ❓ Why is it Needed?
 
-File System Navigation important hai because it:
+File System Navigation helps to:
 
-* Files aur directories locate karne me help karta hai.
-* Different directories ke beech move karne deta hai.
-* Command-line work ko easy banata hai.
-* VAPT aur Linux enumeration me frequently use hota hai.
+* Locate files and directories.
+* Move between different directories.
+* Understand the current file system location.
+* Work efficiently from the command line.
+* Perform enumeration during security testing.
 
 ## ⚙️ How Does it Work?
 
-Linux me current location ek **path** se identify hoti hai.
+Linux uses paths to identify the location of files and directories.
 
 Example:
 
-```text
+```text id="u7i9q1"
 /home/kali/Documents
 ```
 
-* `/` → Root
+* `/` → Root directory
 * `home` → Directory
 * `kali` → User directory
 * `Documents` → Current directory
 
 ## 🏠 Real Life Example
 
-File System ko ek **building** samjho.
+Think of the file system like a **building**:
 
-* `pwd` → Tum abhi kis room me ho?
-* `ls` → Room ke andar kya hai?
-* `cd` → Dusre room me jana
-* `cd ..` → Ek level peeche jana
+* `pwd` → Where am I?
+* `ls` → What is here?
+* `cd` → Move to another room.
+* `cd ..` → Go one level back.
 
 ## 🛠 Practical Demo
 
-```bash
-# Current directory
+```bash id="7s1m8v"
+# Show current directory
 pwd
 
-# List files
+# List files and directories
 ls
 
-# Detailed listing
+# Show hidden files
 ls -la
 
 # Enter a directory
@@ -71,37 +72,37 @@ cd -
 
 ## 💻 Important Commands
 
-| Command  | Purpose                                 |
-| -------- | --------------------------------------- |
-| `pwd`    | Current directory                       |
-| `ls`     | List files/directories                  |
-| `ls -la` | Detailed listing including hidden files |
-| `cd`     | Change directory                        |
-| `cd ..`  | Parent directory                        |
-| `cd ~`   | Home directory                          |
-| `cd /`   | Root directory                          |
-| `cd -`   | Previous directory                      |
+| Command  | Purpose                                    |
+| -------- | ------------------------------------------ |
+| `pwd`    | Show current directory                     |
+| `ls`     | List files/directories                     |
+| `ls -la` | List detailed files including hidden files |
+| `cd`     | Change directory                           |
+| `cd ..`  | Go to parent directory                     |
+| `cd ~`   | Go to home directory                       |
+| `cd /`   | Go to root directory                       |
+| `cd -`   | Go to previous directory                   |
 
 ## 🔐 VAPT Perspective
 
 File System Navigation is useful for:
 
 * Directory Enumeration
-* Finding Configuration Files
-* Finding Sensitive Files
+* Sensitive File Discovery
+* Configuration File Discovery
 * Log Analysis
 * Privilege Escalation
 * Server Enumeration
 
 ## 💡 Key Points
 
-* `pwd` → Where am I?
-* `ls` → What is here?
-* `cd` → Move to another directory.
-* `cd ..` → Move to parent directory.
-* `cd ~` → Go to home directory.
-* `cd /` → Go to root directory.
-* `ls -la` → Show hidden files too.
+* `pwd` → Shows where you are.
+* `ls` → Shows what is inside a directory.
+* `cd` → Changes directory.
+* `cd ..` → Moves to the parent directory.
+* `cd ~` → Goes to the user's home directory.
+* `cd /` → Goes to the root directory.
+* `ls -la` → Shows hidden files.
 
 ## ❓ Interview Questions
 
@@ -110,11 +111,11 @@ File System Navigation is useful for:
 3. Which command is used to change directories?
 4. What does `cd ..` do?
 5. What does `cd ~` do?
-6. How can you view hidden files in Linux?
+6. How do you view hidden files in Linux?
 7. What is the difference between `cd /` and `cd ~`?
 
 ## 📚 References
 
 * Linux Documentation
-* Kali Linux Documentation
 * GNU Coreutils Documentation
+* Kali Linux Documentation
